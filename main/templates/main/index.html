@@ -93,7 +93,8 @@ Start Content
                 <div class="row g-2 align-items-center">
                   <div class="col">
                     <div class="progress progressStyle">
-                      <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%" aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%"
+                        aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                   <div class="col-auto">
@@ -103,7 +104,7 @@ Start Content
               </div>
               {% endif %}
               {% endfor %}
-              
+
             </div>
           </div>
         </div>
@@ -140,9 +141,9 @@ Start Content
             </div>
             {% endif %}
             {% endfor %}
-            
+
           </div>
-        </div>            
+        </div>
         <div class="cert-swiper-button-next swiper-button-next swiperBtnStyle"></div>
         <div class="cert-swiper-button-prev swiper-button-prev swiperBtnStyle"></div>
         <div class="swiper-pagination swiperPaginationStyle posInitial"></div>
@@ -185,7 +186,7 @@ Start Content
         </div>
         {% endif %}
         {% endfor %}
-        
+
       </div>
       <div class="testimonialCol">
         <h4 class="smText regular d-block">Testimonials</h4>
@@ -238,8 +239,8 @@ Start Content
         </div>
       </div>
       <div class="row g-3">
-      {% for b in blogs %}
-      {% if b.is_active %}
+        {% for b in blogs %}
+        {% if b.is_active %}
         <div class="col-lg-6">
           <div class="cardStyle1">
             <h4 class="mdTitle cs1Title"><a href="{% url 'main:blog' slug=b.slug %}">{{b.name}}</a></h4>
