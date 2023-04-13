@@ -3,13 +3,13 @@ version: '3.8'
 services:
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8080
     volumes:
       - .:/code
       - ./db:/code/db
       - uploaded_files:/media
     ports:
-      - "8000:8000"
+      - "8080:8080"
     environment:
       - DJANGO_SETTINGS_MODULE=resume_app.settings
     env_file:

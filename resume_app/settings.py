@@ -12,9 +12,14 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
+os.environ.setdefault("DJANGO_PORT", "8080")
 SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DB_PASSWORD = os.environ.get("DB_PASSWORD")
+PORT = int(os.environ.get("PORT", 8080))
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
