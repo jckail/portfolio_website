@@ -2,37 +2,25 @@
 <!-- ================================
 Start Navigation Bar
 ================================= -->
-<header>
+<header style="background-color: transparent; z-index: 999;">
     <div class="headerCol">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-        <div class="col-auto">
-            <div class="logoCol"><a href="{% url 'main:home' %}">
-                <img src="{% static 'images/logo.png' %}"   
-                style="width: 110px; height: 110px; object-fit: cover;"
-                alt="..."></a></div>
-        </div>
-        <div class="col">
-            <div class="d-md-none">
-            <button class="navToggle">
-                <span class="navToggle__text">Toggle Menu</span>
-            </button>
-            </div>
-            <div class="navCollapseCol">
-            <div class="navCol">
-                <ul>
-                <li><a href="{%url 'main:home'%}">Home</a></li>
-                <li><a href="{%url 'main:portfolios' %}">Portfolio</a></li>
-                <li><a href="{% url 'main:blogs' %}">Blog</a></li>
-                <li><a href="{%url 'main:contact'%}">Contact</a></li>
-                </ul>
-            </div>
+        <div class="container-fluid">
+            <div class="row align-items-left">
+                <div class="col">
+                    <ul style="display: flex; justify-content: left;  gap: 25px;" class="align-items-left">
+
+                        <li><a href="{%url 'main:home'%}" target="_blank" rel="noopener noreferrer"><img
+                                    src="{% static 'images/home.jpg' %}" style="width: 35px; height: 35px;"
+                                    alt="Home"></a></li>
+                        <li><a href="https://github.com/jckail" target="_blank" rel="noopener noreferrer"><img
+                                    src="{% static 'images/github.jpg' %}" style="width: 35px; height: 35px;"
+                                    alt="GitHub"></a></li>
+                        <li><a href="https://www.linkedin.com/in/jordan-kail-51889650/" target="_blank"
+                                rel="noopener noreferrer"><img src="{% static 'images/linkedin.jpg' %}"
+                                    style="width: 35px; height: 35px;" alt="LinkedIn"></a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        </div>
-    </div>
     </div>
 </header>
-<!-- ================================
-End Navigation Bar
-================================= -->
