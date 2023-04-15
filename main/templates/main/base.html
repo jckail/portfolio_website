@@ -22,8 +22,16 @@
   <meta name="description" content="{% block description %}{% endblock %}">
   <meta name="keywords" content="{% block keywords %}{% endblock %}">
 
-  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/icon.jpg' %}">
-  <link rel="apple-touch-icon" type="image/jpg" href="{% static 'images/icon.jpg' %}">
+  <!-- ================================
+    Start Social Media
+    ================================= -->
+  <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png'%}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png'%}">
+  <link rel="manifest" href="{% static 'images/site.webmanifest'%}">
+  <link rel="mask-icon" href="{% static 'images/safari-pinned-tab.svg'%}" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- ================================
     Start CSS
