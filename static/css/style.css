@@ -2,7 +2,7 @@
 
 :root {
   --primaryColor: #55ff00;
-  --primaryColor: #55ff00;
+  --secondaryColor: white;
   /*--primaryColor: #ff0000; */
   --primaryDarkColor: #000000;
   --baseColor: #55ff00;
@@ -13,7 +13,7 @@
   --black: 900;
   --dkBg: #000000;
   --transparent: transparent;
-  --textColor : #000000;
+  --textColor :white;
   --btntextColor : #000000;
   --btnoutColor : #000000;
 }
@@ -207,8 +207,8 @@ a:hover {
         justify-content: center;
         align-items: center;
         padding: 50px 0;
-        text-shadow: white 0px 0px 5px, 1px 1px 30px var(--primaryColor);
-        text-decoration-line: underline;
+        text-shadow: black 5px 1px 50px, 2px 1px 25px var(--primaryColor);
+        /* text-decoration-line: underline; */
         }
         .bannerUserImg {
           margin-left: 20px;
