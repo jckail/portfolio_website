@@ -1,26 +1,12 @@
 {% load static %}
-<!-- ================================
-Start Navigation Bar
-================================= -->
-<header style="background-color: transparent; z-index: 999;">
-    <div class="headerCol">
-        <div class="container-fluid">
-            <div class="row align-items-left">
-                <div class="col">
-                    <ul style="display: flex; justify-content: left;  gap: 25px;" class="align-items-left">
-
-                        <li><a href="{%url 'main:home'%}" target="_blank" rel="noopener noreferrer"><img
-                                    src="{% static 'images/home.jpg' %}" style="width: 35px; height: 35px;"
-                                    alt="Home"></a></li>
-                        <li><a href="https://github.com/jckail" target="_blank" rel="noopener noreferrer"><img
-                                    src="{% static 'images/github.jpg' %}" style="width: 35px; height: 35px;"
-                                    alt="GitHub"></a></li>
-                        <li><a href="https://www.linkedin.com/in/jordan-kail-51889650/" target="_blank"
-                                rel="noopener noreferrer"><img src="{% static 'images/linkedin.jpg' %}"
-                                    style="width: 35px; height: 35px;" alt="LinkedIn"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<div class="navbar">
+    <ul class="nav-items">
+        <li class="navimage"><a href="{%url 'main:home'%}" target="_blank" rel="noopener noreferrer"><img
+                    src="{% static 'images/home.jpg' %}" alt="Home"></a></li>
+        <li class="navimage"><a href="https://github.com/jckail" target="_blank" rel="noopener noreferrer"><img
+                    src="{% static 'images/github.jpg' %}" alt="GitHub"></a></li>
+        <li class="navimage"><a href="https://www.linkedin.com/in/jordan-kail-51889650/" target="_blank"
+                rel="noopener noreferrer"><img src="{% static 'images/linkedin.jpg' %}" alt="LinkedIn"></a>
+        </li>
+    </ul>
+</div>

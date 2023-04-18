@@ -1,178 +1,87 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-<!-- ================================
-Start SEO blocks
-================================= -->
 {% block title %}{% endblock %}
-{% block decription %}{% endblock %}
+{% block description %}{% endblock %}
 {% block keywords %}{% endblock %}
-<!-- ================================
-END SEO blocks
-================================= -->
 
-<!-- ================================
-Start CSS blocks
-================================= -->
-{% block extend_header %}
-
-{% endblock %}
-<!-- ================================
-END CSS blocks
-================================= -->
-
-<!-- ================================
-Start script blocks
-================================= -->
-{% block extend_footer %}{% endblock %}
-<!-- ================================
-END script blocks
-================================= -->
-
-<!-- ================================
-Start Content
-================================= -->
 {% block content %}
+<div id="particles-js"></div>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-<body>
-  <div id="particles-js"></div>
-
-  <section>
-    <div class="bannerSection">
-      <div class="container bannerContainer">
-        <div class="row g-4 g-md-3 align-items-center text-center">
-          <div class="col-md-auto order-md-last">
-          </div>
-          <div class="col-md">
-            <div class="bannerContent">
-              <h1 class="xlTitle"> Got Data?</h1>
-
-            </div>
+<section>
+  <div class="bannerSection">
+    <div class="container bannerContainer">
+      <div class="row g-4 g-md-3 align-items-center text-center">
+        <div class="col-md-auto order-md-last"></div>
+        <div class="col-md">
+          <div class="bannerContent">
+            <h1 class="xlTitle">Got Data?</h1>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section>
-    <div class="bannerSection">
-      <div class="container bannerContainer">
-        <div class="row g-4 g-md-3 align-items-center">
-          <div class="col-md-auto order-md-last">
-            <div class="bannerUserImg">
-              <img src="{% static 'images/avatar.jpeg' %}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="bannerContent">
-              <h1 class="lgTitle"> <br /> I can help! </br></h1>
-              <div class="bannerBtnCol d-flex align-items-center">
-                <a download href="{% static 'files/JordanKailResume.pdf' %}" class="btn btnPrimary">Download
-                  Resume</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 
-    <p>{{me.userprofile.bio}}</p>
-    <section class="border-top pt-4">
-  <div class="sectionSpace pt-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-auto">
-          <div class="keySkillCol">
-            <h4 class="lgTitle pb-3">Skills</h4>
-            {% for sk in me.userprofile.skills.all %}
-            {% if sk.is_key_skill %}
-            <div class="keySkillCard">
-              {% if sk.image %}
-              <div class="ksIconCol">
-                <img src="{{sk.image.url}}" alt="...">
-              </div>
-              {% endif %}
-              <span class="ksText">{{sk.name}}</span>
-            </div>
-            {% endif %}
-            {% endfor %}
+<section>
+  <div class="bannerSection">
+    <div class="container bannerContainer">
+      <div class="row g-4 g-md-3 align-items-center">
+        <div class="col-md-auto order-md-last">
+          <div class="bannerUserImg">
+            <img src="{% static 'images/avatar.jpeg' %}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar">
           </div>
         </div>
         <div class="col-md">
-          <h4 class="lgTitle pb-3">Proficiency</h4>
-          <div class="progressCol">
-            <div class="progressCard">
-              {% for sk in me.userprofile.skills.all %}
-              {% if sk.is_key_skill %}
-              <div class="progressCol">
-                <span class="progressLbl">{{sk.name}}</span>
-                <div class="row g-2 align-items-center">
-                  <div class="col">
-                    <div class="progress progressStyle">
-                      <div class="progress-bar" role="progressbar" style="width: {{sk.score}}%"
-                        aria-valuenow="{{sk.score}}" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="col-auto">
-                    <span class="pLbl">{{sk.score}}%</span>
-                  </div>
-                </div>
-              </div>
-              {% endif %}
-              {% endfor %}
-
+          <div class="bannerContent">
+            <h1 class="lgTitle">I can help!</h1>
+            <div class="bannerBtnCol d-flex align-items-center">
+              <a download href="{% static 'files/JordanKailResume.pdf' %}" class="btn btnPrimary">Download
+                Resume</a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
-  <section>
-    <div class="sectionSpace">
-      <div class="container">
-        <div class="portfolioCol">
-          <div class="row pb-3">
-            <div class="col">
-              <a href="{% url 'main:portfolios' %}" target="_blank" rel="noopener noreferrer" class="simpleLink">
-                <h4 class="lgTitle">Portfolio </h4>
-              </a>
-            </div>
+<!-- <section>
+  <div class="sectionSpace">
+    <div class="container">
+      <div class="portfolioCol">
+        <div class="row pb-3">
+          <div class="col">
+            <a href="{% url 'main:portfolios' %}" target="_blank" rel="noopener noreferrer" class="simpleLink">
+              <h4 class="lgTitle">Portfolio</h4>
+            </a>
           </div>
-          {% for p in portfolio %}
-          {% if p.is_active %}
-          <div class="portfolioCard">
-            <div class="row g-4 align-items-center">
-              <div class="col-md-auto">
-                <div class="portfolioImgCol">
-                  <a href="{% url 'main:portfolio' slug=p.slug %}"><img src="{{p.image.url}}" alt="..."></a>
-                </div>
-              </div>
-              <div class="col-md">
-                <div class="portfolioContentCol">
-                  <h4 class="lgTitle"><a href="{% url 'main:portfolio' slug=p.slug %}">{{p.name}}</a></h4>
-                  <ul class="portfolioOption">
-                    <li><span class="dateLbl">{{p.date.year}}</span></li>
-                  </ul>
-                  <p>{{p.description}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {% endif %}
-          {% endfor %}
-
         </div>
-
+        {% for p in portfolio %}
+        {% if p.is_active %}
+        <div class="portfolioCard">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-auto">
+              <div class="portfolioImgCol">
+                <a href="{% url 'main:portfolio' slug=p.slug %}"><img src="{{p.image.url}}" alt="..."></a>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="portfolioContentCol">
+                <h4 class="lgTitle"><a href="{% url 'main:portfolio' slug=p.slug %}">{{p.name}}</a></h4>
+                <ul class="portfolioOption">
+                  <li><span class="dateLbl">{{p.date.year}}</span></li>
+                </ul>
+                <p>{{p.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
       </div>
     </div>
-  </section>
-</body>
-
+  </div>
+</section> -->
 {% endblock %}
-<!-- ================================
-End Content
-================================= -->
